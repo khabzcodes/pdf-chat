@@ -1,5 +1,7 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { FileUp } from "lucide-react";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -16,11 +18,10 @@ export const Hero = () => {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 w-full max-w-md justify-center">
-            <Button>
-              <FileUp className="mr-2 h-4 w-4" />
+            <Link href="/chat" className={buttonVariants({ size: "sm" })}>
+              <FileUp className="h-4 w-4" />
               Upload PDF
-            </Button>
-            <Button variant="outline">Learn more</Button>
+            </Link>
           </div>
         </div>
       </div>

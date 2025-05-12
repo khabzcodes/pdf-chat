@@ -60,32 +60,7 @@ export const Navbar = () => {
           </>
         ) : (
           <>
-            <nav className="flex items-center gap-6">
-              <Link
-                href="#features"
-                className="text-sm font-medium transition-colors"
-              >
-                Features
-              </Link>
-              <Link
-                href="#how-it-works"
-                className="text-sm font-medium transition-colors"
-              >
-                How it works
-              </Link>
-              <Link
-                href="#pricing"
-                className="text-sm font-medium transition-colors"
-              >
-                Pricing
-              </Link>
-              <Link
-                href="#faq"
-                className="text-sm font-medium transition-colors"
-              >
-                FAQ
-              </Link>
-            </nav>
+            <nav className="flex items-center gap-6"></nav>
             <Link href="/chat" className={buttonVariants({ size: "sm" })}>
               Chat now
             </Link>
