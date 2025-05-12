@@ -30,9 +30,6 @@ export async function POST(req: NextRequest) {
 
     await writeFile(filePath, buffer);
 
-    console.log("File type:", fileType);
-    console.log("File path:", filePath);
-
     // Extract text from the file
     const extractedText = await extractTextFromFile({
       filepath: filePath,
