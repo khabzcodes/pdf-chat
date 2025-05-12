@@ -2,6 +2,7 @@
 
 import FileUploadArea from "@/components/file-uploader/file-upload-area";
 import { FileLite } from "@/types/file";
+import FileQandAArea from "@/components/file-q-and-a";
 import React from "react";
 
 export default function ChatPage() {
@@ -25,6 +26,7 @@ export default function ChatPage() {
           maxNumFiles={50}
           maxFileSizeMB={70}
         />
+        <FileQandAArea files={files} />
       </div>
     </div>
   );
