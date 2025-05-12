@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PDF Chat - Chat with your PDF documents using AI
+
+PDF Chat is a modern web application that allows users to upload PDF documents and interact with them through a conversational AI interface. Built with Next.js and OpenAI, this application makes it easy to extract information from your PDFs by simply asking questions in natural language.
+
+![PDF Chat Application](https://example.com/pdf-chat-screenshot.png)
+
+## Features
+
+- 📄 **PDF Upload & Processing** - Upload PDF documents and process them for AI interaction
+- 💬 **Conversational AI Interface** - Ask questions about your PDFs and get immediate answers
+- 🔍 **Semantic Search** - Find relevant information in your documents using natural language
+- 📱 **Responsive Design** - Works seamlessly on desktop and mobile devices
+- ⚡ **Fast Processing** - Efficient text extraction and embedding generation
+
+## Tech Stack
+
+- **Frontend**: Next.js, React, Tailwind CSS, Radix UI
+- **AI Processing**: OpenAI API
+- **PDF Processing**: pdf-parse
+- **Styling**: Tailwind CSS with customizable components
+- **Deployment**: Ready for deployment on Vercel
+
+## Prerequisites
+
+Before you begin, ensure you have:
+
+- Node.js 18.x or higher
+- An OpenAI API key for the AI functionality
+- npm, pnpm, or Yarn package manager
+
+## Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```
+OPENAI_API_KEY=your_openai_api_key
+```
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
 ```bash
+git clone https://github.com/khabzcodes/pdf-chat.git
+cd pdf-chat
+```
+
+2. Install dependencies:
+
+```bash
+pnpm install
+# or
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
+
+```bash
+pnpm dev
+# or
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How It Works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Upload PDF** - Upload your PDF documents through the user interface
+2. **Text Extraction** - The application extracts text from the PDF documents
+3. **Embedding Generation** - The text is processed and embeddings are generated
+4. **Question & Answer** - Ask questions about your documents and get AI-powered answers
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/               # Next.js App Router pages and API routes
+├── api/           # Backend API endpoints for PDF processing and AI
+├── chat/          # Chat interface page
+components/        # React components
+├── file-uploader/ # PDF upload components
+├── landing/       # Landing page components
+├── ui/            # UI components (built with Radix UI)
+lib/               # Utility functions and core logic
+├── chunk-text.ts  # Text chunking utilities
+├── openai.ts      # OpenAI API integration
+types/             # TypeScript type definitions
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.
